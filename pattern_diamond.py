@@ -75,3 +75,29 @@ OUTPUT:
    222
     1
 '''
+#================================================
+n, m = map(int,input().split())
+for i in range(n//2):
+    for j in range(1, (n-1),2):
+        txt='.|.'*j 
+        print(txt.center(m,"-"))
+    break
+w="WELCOME"
+print(w.center(m,"-"))
+for i in range(n//2):
+    for j in range(n-2,0,-2):
+        txt='.|.'*j 
+        print(txt.center(m,"-"))
+    break
+'''
+INPUT:
+  7 21
+OUTPUT:
+---------.|.---------
+------.|..|..|.------
+---.|..|..|..|..|.---
+-------WELCOME-------
+---.|..|..|..|..|.---
+------.|..|..|.------
+---------.|.---------
+
