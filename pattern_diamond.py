@@ -100,4 +100,44 @@ OUTPUT:
 ---.|..|..|..|..|.---
 ------.|..|..|.------
 ---------.|.---------
+'''
+#=============================================
+n=5
+a=n
+for i in range(n):
+    for j in range(2*n-(2*i)-2):
+        print(end="-")
+    for j in range(i+1):
+        print(chr(96+a-j),end="-")
+    for j in range(i):
+        if((96+n+1-i+j==96+n) and (j==n-2)):
+            print(chr(96+n+1-i+j),end="")
+        else:
+            print(chr(96+n+1-i+j),end="-")
+    for j in range(2*n-(2*i)-2-1):
+        print(end="-")
+    print()
+for i in range(n-1):
+    for j in range(2+2*i):
+        print(end="-")
+    for j in range(n-i-1):
+        print(chr(96+n-j),end="-")
+    for j in range(n-2-i):
+        print(chr(97+2+j+i),end="-")
+    for j in range(2*i+1):
+        print(end="-")
+    print()
+ '''
+ OUTPUT:
+--------e--------
+------e-d-e------
+----e-d-c-d-e----
+--e-d-c-b-c-d-e--
+e-d-c-b-a-b-c-d-e
+--e-d-c-b-c-d-e--
+----e-d-c-d-e----
+------e-d-e------
+--------e--------
 
+''''
+#===========================================
