@@ -108,7 +108,10 @@ for i in range(n):
     for j in range(2*n-(2*i)-2):
         print(end="-")
     for j in range(i+1):
-        print(chr(96+a-j),end="-")
+        if(j==0 and i==0):
+            print(chr(96+a-j),end="")
+        else:
+            print(chr(96+a-j),end="-")
     for j in range(i):
         if((96+n+1-i+j==96+n) and (j==n-2)):
             print(chr(96+n+1-i+j),end="")
