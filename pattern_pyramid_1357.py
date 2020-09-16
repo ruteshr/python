@@ -97,3 +97,28 @@ OUTPUT:
  4321234
 543212345
 '''
+#=============================================
+n=5
+a=n
+for i in range(n):
+    for j in range(2*n-(2*i)-2):
+        print(end="-")
+    for j in range(i+1):
+        print(chr(96+a-j),end="-")
+    for j in range(i):
+        if((96+n+1-i+j==96+n) and (j==n-2)):
+            print(chr(96+n+1-i+j),end="")
+        else:
+            print(chr(96+n+1-i+j),end="-")
+    for j in range(2*n-(2*i)-2-1):
+        print(end="-")
+    print()
+    '''
+OUTPUT:
+--------e--------
+------e-d-e------
+----e-d-c-d-e----
+--e-d-c-b-c-d-e--
+e-d-c-b-a-b-c-d-e
+
+'''
